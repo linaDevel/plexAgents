@@ -67,7 +67,7 @@ class EXCAgent(Agent.Movies):
         for member in details.xpath('//video/models/model'):
             role = metadata.roles.new()
 
-            role.actor = member.get('name')
+            role.name = member.get('name')
             metadata.collections.add(member.get('name'))
             role.photo = member.get('image')
 
